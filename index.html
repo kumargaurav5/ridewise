@@ -11,7 +11,7 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background-image: url('5444.jpg');
+      background-image: url('5447.png');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -22,7 +22,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      height: 100vh;
+      height: 115vh;
       text-align: center;
     }
 
@@ -33,7 +33,7 @@
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
 
-    h1 {
+    h2 {
       color: #333333;
       font-size: 3em;
       margin-bottom: 0.5em;
@@ -45,64 +45,51 @@
       margin-top: 0;
     }
 
-    .countdown {
-      color: #999999;
-      font-size: 2em;
-      margin-top: 2em;
+
+    .contact {
+      margin-top: 3.5em;
+      text-align: center;
     }
 
-    /* Customizing the button */
-    .btn {
-      background-color: #ff6600;
-      color: #ffffff;
-      border: none;
-      border-radius: 4px;
-      padding: 10px 20px;
+    .contact p {
+      color: #666666;
       font-size: 1.2em;
-      text-decoration: none;
-      margin-top: 2em;
-      transition: background-color 0.3s ease;
     }
 
-    .btn:hover {
-      background-color: #cc5500;
+    .contact a {
+      color: #333333;
+      text-decoration: none;
     }
+    .company-name{
+       text-align: center;
+       margin: 0px;
+       padding: 40px 0px 0px 0px;
+       text-shadow: #b60b0b;
+
+    }
+
+ h1 {
+  font-size: 70px;
+  font-weight: 600;
+  background-image: linear-gradient(to left, #553c9a, #b393d3);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
   </style>
 </head>
 <body>
+  <h1 class="company-name">RideWise</h1>
   <div class="container">
     <div class="column">
-      <h1>Coming Soon</h1>
+      <h2>Coming Soon</h2>
       <p>We're launching soon! Stay tuned for the best cab comparison service.</p>
       <div class="countdown" id="countdown"></div>
     </div>
+    <div class="contact">
+      <p>For any inquiries, please mail us to <a href="mailto:info@ridewise.tech">info@ridewise.tech</a>.</p>
+    </div>
   </div>
 
-  <script>
-    // JavaScript for countdown timer
-    const countdownElement = document.getElementById('countdown');
-    const launchDate = new Date('2023-07-01T00:00:00Z').getTime();
-
-    const updateCountdown = () => {
-      const currentDate = new Date().getTime();
-      const distance = launchDate - currentDate;
-
-      // Calculating days, hours, minutes, seconds
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-      // Displaying the countdown
-      countdownElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-
-      // If the countdown is over, update the UI accordingly
-      if (distance < 0) {
-        countdownElement.innerHTML = "We're Live!";
-      }
-    }
-
-    // Update the countdown every second
-    setInterval(updateCountdown, 1000);
- 
-
+</body>
+</html>
